@@ -1,5 +1,5 @@
-import { Image, StyleSheet, Platform } from 'react-native';
-
+import { Image, StyleSheet, Platform, View } from 'react-native';
+import { Link } from 'expo-router';
 import { HelloWave } from '@/components/HelloWave';
 import ParallaxScrollView from '@/components/ParallaxScrollView';
 import { ThemedText } from '@/components/ThemedText';
@@ -16,7 +16,7 @@ export default function HomeScreen() {
         />
       }>
       <ThemedView style={styles.titleContainer}>
-        <ThemedText type="title">Welcome Asanka!!</ThemedText>
+        <ThemedText type="title">Welcome Asanka!</ThemedText>
         <HelloWave />
       </ThemedView>
       <ThemedView style={styles.stepContainer}>
@@ -36,6 +36,9 @@ export default function HomeScreen() {
           Tap the Explore tab to learn more about what's included in this starter app.
         </ThemedText>
       </ThemedView>
+      <View>
+        <Link href="/profile" style={{color:'blue'}}>Profile</Link>
+      </View>
       <ThemedView style={styles.stepContainer}>
         <ThemedText type="subtitle">Step 3: Get a fresh start</ThemedText>
         <ThemedText>
